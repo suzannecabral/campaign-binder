@@ -13,13 +13,10 @@ import React from "react";
 const SidePanelFolders = (props) => {
 	return (
 		<div>
-			<Heading as="h3" size="xs">
-				Folders
-			</Heading>
 			<Accordion defaultIndex={[0]} allowMultiple bg="peachpuff">
 				<AccordionItem>
 					<AccordionButton bg="burlywood">
-						<Text>Group 1 </Text>
+						<Text>Folder 1 </Text>
 						<AccordionIcon />
 					</AccordionButton>
 					<AccordionPanel>
@@ -32,7 +29,7 @@ const SidePanelFolders = (props) => {
 				</AccordionItem>
 				<AccordionItem bg="burlywood">
 					<AccordionButton>
-						<Text>Group 2</Text>
+						<Text>Folder 2</Text>
 						<AccordionIcon />
 					</AccordionButton>
 					<AccordionPanel>

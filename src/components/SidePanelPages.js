@@ -1,12 +1,15 @@
 import React from "react";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Stack, Box, Text, Button } from "@chakra-ui/react";
 
 const SidePanelPages = (props) => {
 	return (
 		<div>
-			<Heading as="h3" size="xs">
-				Pages
-			</Heading>
+			<Stack bg="wheat">
+				<Button variant="ghost">Page 1</Button>
+				<Button variant="ghost">Page 2</Button>
+				<Button variant="ghost">Page 3</Button>
+				<Button variant="ghost">Page 4</Button>
+			</Stack>
 		</div>
 	);
 };
