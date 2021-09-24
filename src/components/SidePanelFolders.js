@@ -1,13 +1,14 @@
-import React from "react";
-import { Heading } from "@chakra-ui/react";
 import {
 	Accordion,
-	AccordionItem,
 	AccordionButton,
-	AccordionPanel,
-	Text,
 	AccordionIcon,
+	AccordionItem,
+	AccordionPanel,
+	Heading,
+	Text,
 } from "@chakra-ui/react";
+
+import React from "react";
 
 const SidePanelFolders = (props) => {
 	return (
@@ -15,9 +16,9 @@ const SidePanelFolders = (props) => {
 			<Heading as="h3" size="xs">
 				Folders
 			</Heading>
-			<Accordion defaultIndex={[0]} allowMultiple>
+			<Accordion defaultIndex={[0]} allowMultiple bg="peachpuff">
 				<AccordionItem>
-					<AccordionButton>
+					<AccordionButton bg="burlywood">
 						<Text>Group 1 </Text>
 						<AccordionIcon />
 					</AccordionButton>
@@ -29,7 +30,7 @@ const SidePanelFolders = (props) => {
 					<AccordionItem />
 					<AccordionItem />
 				</AccordionItem>
-				<AccordionItem>
+				<AccordionItem bg="burlywood">
 					<AccordionButton>
 						<Text>Group 2</Text>
 						<AccordionIcon />
