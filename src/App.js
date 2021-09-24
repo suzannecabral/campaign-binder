@@ -2,7 +2,12 @@ import {useSelector, useDispatch} from 'react-redux';
 import {useEffect} from 'react';
 //import constants for action types
 import {getPeopleAction} from './actions/peopleActions';
+import {Button} from '@chakra-ui/react';
 import './App.css';
+import MainEditorWindow from './components/MainEditorWindow';
+import SidePanelsWrapper from './components/SidePanelsWrapper';
+import SideBarButtons from './components/SideBarButtons';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -23,7 +28,10 @@ function App() {
   return (
     <div className="App">
       {people && success && <h1>Person Added</h1>}
-      <button onClick={handleClick}>Update</button>
+      <Button onClick={handleClick}>Update</Button>
+      <SideBarButtons />
+      <SidePanelsWrapper />
+      <MainEditorWindow />
     </div>
   );
 }
