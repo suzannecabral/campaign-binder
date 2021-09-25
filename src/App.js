@@ -2,11 +2,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 //import constants for action types
 import { getPeopleAction } from "./actions/peopleActions";
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, chakra } from "@chakra-ui/react";
 import "./App.css";
 import MainEditorWindow from "./components/MainEditorWindow";
 import SidePanelsWrapper from "./components/SidePanelsWrapper";
 import SideBarButtons from "./components/SideBarButtons";
+import TopNavBar from "./components/TopNavBar";
 
 function App() {
 	const dispatch = useDispatch();
@@ -21,20 +22,21 @@ function App() {
 
 	useEffect(() => {
 		dispatch(getPeopleAction());
-	}, [getPeopleAction]);
+	}, dispatch);
 
 	return (
-		<div className="App">
-			{people && success && <h1>Person Added</h1>}
-			<Button onClick={handleClick} bg="red.a200">
+		<Flex className="App" height="100%" direction="column">
+			{/* {people && success && <h1>Person Added</h1>}
+			<Button onClick={handleClick} bg="green.300">
 				Update
-			</Button>
-			<Flex>
+			</Button> */}
+			<TopNavBar />
+			<Flex height="100%" width="100%" grow="1">
 				<SideBarButtons />
 				<SidePanelsWrapper />
-				<MainEditorWindow />
+				<MainEditorWindow grow="1" />
 			</Flex>
-		</div>
+		</Flex>
 	);
 }
 

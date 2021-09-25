@@ -1,18 +1,48 @@
 import React from "react";
 import SidePanelFolders from "./SidePanelFolders";
 import SidePanelPages from "./SidePanelPages";
-import { Heading, Flex } from "@chakra-ui/react";
+import {
+	Heading,
+	Flex,
+	Box,
+	Menu,
+	MenuList,
+	MenuItem,
+	MenuButton,
+	Button,
+	Icon,
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { ImBook } from "react-icons/im";
 
 const SidePanelsWrapper = (props) => {
 	return (
 		<div>
-			<Heading as="h2" size="sm">
-				Notebook Name
-			</Heading>
-			<Flex>
-				<SidePanelFolders />
-				<SidePanelPages />
-			</Flex>
+			<Box w="100%" h="100%" bg="indianred">
+				<Menu>
+					<MenuButton
+						as={Button}
+						width="100%"
+						height="8"
+						variant="ghost"
+						textAlign="left"
+					>
+						<Icon as={ImBook} mr="1" />
+						Notebook 1
+						<ChevronDownIcon ml="3" />
+					</MenuButton>
+					<MenuList>
+						<MenuItem>Notebook 1</MenuItem>
+						<MenuItem>Notebook 2</MenuItem>
+						<MenuItem>Notebook 3</MenuItem>
+						<MenuItem>+ Add New</MenuItem>
+					</MenuList>
+				</Menu>
+				<Flex height="100%">
+					<SidePanelFolders />
+					<SidePanelPages />
+				</Flex>
+			</Box>
 		</div>
 	);
 };

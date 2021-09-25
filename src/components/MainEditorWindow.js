@@ -1,14 +1,16 @@
-import { Heading, chakra } from "@chakra-ui/react";
+import { Heading, Box, chakra } from "@chakra-ui/react";
 
 import React from "react";
 
 const MainEditorWindow = (props) => {
 	return (
-		<div>
-			<Heading as="h1" size="md">
-				Editor Window
-			</Heading>
-		</div>
+		<chakra.div flex="1">
+			<Box bg="antiquewhite" w="100%" h="100%">
+				<Heading as="h1" size="md" textAlign="left" pt="4" pl="6">
+					Editor Window
+				</Heading>
+			</Box>
+		</chakra.div>
 	);
 };
 

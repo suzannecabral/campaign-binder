@@ -4,7 +4,7 @@ import {
 	AccordionIcon,
 	AccordionItem,
 	AccordionPanel,
-	Heading,
+	Button,
 	Text,
 } from "@chakra-ui/react";
 
@@ -13,27 +13,27 @@ import React from "react";
 const SidePanelFolders = (props) => {
 	return (
 		<div>
-			<Accordion defaultIndex={[0]} allowMultiple bg="peachpuff">
+			<Accordion allowMultiple h="100%" w="40">
 				<AccordionItem>
-					<AccordionButton bg="burlywood">
+					<AccordionButton>
 						<Text>Folder 1 </Text>
 						<AccordionIcon />
 					</AccordionButton>
 					<AccordionPanel>
-						<Text>Text value</Text>
+						<Button variant="ghost">Page or Folder</Button>
 					</AccordionPanel>
 					<AccordionItem />
 					<AccordionItem />
 					<AccordionItem />
 					<AccordionItem />
 				</AccordionItem>
-				<AccordionItem bg="burlywood">
+				<AccordionItem>
 					<AccordionButton>
 						<Text>Folder 2</Text>
 						<AccordionIcon />
 					</AccordionButton>
 					<AccordionPanel>
-						<Text>Text value</Text>
+						<Button variant="ghost">Page or Folder</Button>
 					</AccordionPanel>
 					<AccordionItem />
 					<AccordionItem />
