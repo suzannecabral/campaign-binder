@@ -5,7 +5,7 @@ import React from "react";
 const MainEditorWindow = (props) => {
 	return (
 		<chakra.div flex="1">
-			<Box bg="antiquewhite" w="100%" h="100%">
+			<Box bg="mistyrose" w="100%" h="100%">
 				<Heading as="h1" size="md" textAlign="left" pt="4" pl="6">
 					Editor Window
 				</Heading>

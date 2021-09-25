@@ -23,7 +23,7 @@ const SidePanelsWrapper = (props) => {
 					<MenuButton
 						as={Button}
 						width="100%"
-						height="8"
+						height="12"
 						variant="ghost"
 						textAlign="left"
 					>

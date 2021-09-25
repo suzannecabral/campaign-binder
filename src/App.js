@@ -31,10 +31,10 @@ function App() {
 				Update
 			</Button> */}
 			<TopNavBar />
-			<Flex height="100%" width="100%" grow="1">
+			<Flex height="100vh" width="100%" grow={1}>
 				<SideBarButtons />
 				<SidePanelsWrapper />
-				<MainEditorWindow grow="1" />
+				<MainEditorWindow grow={1} />
 			</Flex>
 		</Flex>
 	);
