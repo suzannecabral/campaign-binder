@@ -1,5 +1,7 @@
 import React from "react";
+import { setState } from "react";
 import { Heading, Stack, Box, Text, Button } from "@chakra-ui/react";
+import notes from "../content/dummyNotesSimple.js";
 
 const SidePanelPages = (props) => {
 	return (
