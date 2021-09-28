@@ -17,6 +17,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { ImBook } from "react-icons/im";
 
 const SidePanelsWrapper = (props) => {
+	const { notes } = props;
 	return (
 		<div>
 			<Box w="100%" h="100%" bg="indianred">
@@ -40,8 +41,8 @@ const SidePanelsWrapper = (props) => {
 					</MenuList>
 				</Menu>
 				<Flex height="100%">
-					<SidePanelFolders />
-					<SidePanelPages />
+					<SidePanelFolders notes={notes} />
+					<SidePanelPages notes={notes} />
 				</Flex>
 			</Box>
 		</div>
