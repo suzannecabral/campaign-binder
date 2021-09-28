@@ -1,4 +1,4 @@
-const notes = {
+const dummyNotebook = {
 	sections: [
 		{
 			id: "SClffFObu",
@@ -82,4 +82,4 @@ const notes = {
 	],
 };
 
-export default notes;
+export default dummyNotebook;

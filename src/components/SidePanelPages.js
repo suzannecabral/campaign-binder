@@ -12,10 +12,12 @@ import {
 	VisuallyHidden,
 } from "@chakra-ui/react";
 import { AddIcon, CheckIcon } from "@chakra-ui/icons";
+import * as types from "../constants/actionTypes";
 
 const SidePanelPages = (props) => {
 	const { notes } = props;
 	const dispatch = useDispatch();
+	const reduxPages = useSelector((state) => state.pagesReducer);
 	const initialPageName = "Untitled Page";
 	const pages = notes.sections[0].tabs[0].pages;
 
@@ -34,13 +36,19 @@ const SidePanelPages = (props) => {
 
 	// [?]	Should this be in a promise/async?
 	const addNewPage = () => {
-		let updatedPages = [...displayPages];
-		updatedPages.push({
+		// let updatedPages = [...displayPages];
+		// updatedPages.push({
+		// 	id: shortid.generate(),
+		// 	title: newPageName,
+		// 	content: "",
+		// });
+		// setDisplayPages(updatedPages);
+		let newPage = {
 			id: shortid.generate(),
 			title: newPageName,
 			content: "",
-		});
-		setDisplayPages(updatedPages);
+		};
+		dispatch({ type: types.ADD_PAGE, payload: newPage });
 	};
 
 	const onSubmit = (e) => {

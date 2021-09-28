@@ -8,7 +8,7 @@ import MainEditorWindow from "./components/MainEditorWindow";
 import SidePanelsWrapper from "./components/SidePanelsWrapper";
 import SideBarButtons from "./components/SideBarButtons";
 import TopNavBar from "./components/TopNavBar";
-import notes from "./content/dummyNotesSimple";
+import notes from "./content/dummyNotebookSimple";
 
 function App() {
 	const displayNotes = notes;
