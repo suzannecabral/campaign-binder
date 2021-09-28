@@ -13,13 +13,14 @@ import {
 } from "@chakra-ui/react";
 import { AddIcon, CheckIcon } from "@chakra-ui/icons";
 import * as types from "../constants/actionTypes";
+import { notebook } from "../content/dummyNotebookSimple";
 
 const SidePanelPages = (props) => {
-	const { notes } = props;
 	const dispatch = useDispatch();
-	const reduxPages = useSelector((state) => state.pagesReducer);
+	// const reduxNotebook = useSelector((state) => state.pagesReducer);
+	const reduxNotebook = notebook;
 	const initialPageName = "Untitled Page";
-	const pages = notes.sections[0].tabs[0].pages;
+	const pages = reduxNotebook.sections[0].tabs[0].pages;
 
 	const [displayPages, setDisplayPages] = useState(pages);
 	const [newPageName, setNewPageName] = useState(initialPageName);

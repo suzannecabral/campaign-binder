@@ -2,16 +2,15 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 // import {reducers} from reducer files
-import { peopleReducer } from "./reducers/peopleReducers";
-import { pageReducer } from "./reducers/pageReducer";
-import { dummyNotebook } from "./content/dummyNotebookSimple";
-
+// import { peopleReducer } from "./reducers/peopleReducers";
+import { pagesReducer } from "./reducers/pagesReducer";
+import { notebook } from "./content/dummyNotebookSimple";
 // each key-value pair is a different reducer
 // can be accessed as part of state
 // can use react-redux (useSelector, useDispatch) instead of mapStateToProps
-const reducer = combineReducers({ peopleReducer, pageReducer });
+const reducer = combineReducers({ pagesReducer });
 
-const initialState = { dummyNotebook };
+const initialState = notebook;
 
 const middleware = [thunk];
 

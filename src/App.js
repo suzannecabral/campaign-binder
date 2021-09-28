@@ -8,10 +8,10 @@ import MainEditorWindow from "./components/MainEditorWindow";
 import SidePanelsWrapper from "./components/SidePanelsWrapper";
 import SideBarButtons from "./components/SideBarButtons";
 import TopNavBar from "./components/TopNavBar";
-import notes from "./content/dummyNotebookSimple";
+// import notes from "./content/dummyNotebookSimple";
 
 function App() {
-	const displayNotes = notes;
+	// const displayNotes = notes;
 	// const dispatch = useDispatch();
 	// const people = useSelector((state) => state.peopleReducer);
 	// const { success } = people;
@@ -37,7 +37,7 @@ function App() {
 			<TopNavBar />
 			<Flex height="100vh" width="100%" grow={1}>
 				<SideBarButtons />
-				<SidePanelsWrapper notes={displayNotes} />
+				<SidePanelsWrapper />
 				<MainEditorWindow grow={1} />
 			</Flex>
 		</Flex>

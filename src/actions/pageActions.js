@@ -8,3 +8,8 @@ export const getPages = () => (dispatch) => {
 export const addPages = (content) => (dispatch) => {
 	dispatch({ type: types.ADD_PAGE, payload: content });
 };
+
+// TODO later: payload will be for specific notebook
+export const getNotes = () => (dispatch) => {
+	dispatch({ type: types.GET_NOTES });
+};
