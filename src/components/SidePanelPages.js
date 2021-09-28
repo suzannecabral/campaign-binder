@@ -13,16 +13,16 @@ import {
 } from "@chakra-ui/react";
 import { AddIcon, CheckIcon } from "@chakra-ui/icons";
 import * as types from "../constants/actionTypes";
-import { notebook } from "../content/dummyNotebookSimple";
 
 const SidePanelPages = (props) => {
 	const dispatch = useDispatch();
-	// const reduxNotebook = useSelector((state) => state.pagesReducer);
-	const reduxNotebook = notebook;
 	const initialPageName = "Untitled Page";
-	const pages = reduxNotebook.sections[0].tabs[0].pages;
 
-	const [displayPages, setDisplayPages] = useState(pages);
+	// const pages = reduxNotebook.sections[0].tabs[0].pages;
+	const storePages = useSelector((state) => state.pagesReducer.pages);
+	const initialPages = [...storePages];
+
+	const [displayPages, setDisplayPages] = useState(initialPages);
 	const [newPageName, setNewPageName] = useState(initialPageName);
 	const [isEditing, setIsEditing] = useState(false);
 	// const [globalPages, setGlobalPages] = useState(pages);
@@ -37,13 +37,6 @@ const SidePanelPages = (props) => {
 
 	// [?]	Should this be in a promise/async?
 	const addNewPage = () => {
-		// let updatedPages = [...displayPages];
-		// updatedPages.push({
-		// 	id: shortid.generate(),
-		// 	title: newPageName,
-		// 	content: "",
-		// });
-		// setDisplayPages(updatedPages);
 		let newPage = {
 			id: shortid.generate(),
 			title: newPageName,

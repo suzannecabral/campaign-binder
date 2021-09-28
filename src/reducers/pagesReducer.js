@@ -1,23 +1,19 @@
 import * as types from "../constants/actionTypes.js";
-import notebook from "../content/dummyNotebookSimple";
+import notebook from "../content/dummyNotebookTest";
 
 const initialState = notebook;
+
 export const pagesReducer = (currentState = initialState, action) => {
 	switch (action.type) {
 		case types.ADD_PAGE:
-			const updatedPages = { ...currentState.sections[0].tabs[0].pages };
-			console.log(updatedPages);
-			updatedPages.push(action.payload);
+			// return currentState;
+
 			return {
-				pages: updatedPages,
 				...currentState,
+				pages: [...currentState.pages, action.payload],
 			};
 		case types.GET_PAGES:
-			return {
-				currentState,
-				// ...state,
-				// pages: action.payload,
-			};
+			return currentState;
 		default:
 			return currentState;
 	}
