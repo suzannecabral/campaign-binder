@@ -1,4 +1,4 @@
-const notebook = {
+export const notebook = {
 	id: "i9hyswqXR",
 	title: "test notebook",
 	pages: [
@@ -14,4 +14,5 @@ const notebook = {
 		},
 	],
 };
+
 export default notebook;

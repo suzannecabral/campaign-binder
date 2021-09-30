@@ -19,10 +19,9 @@ const SidePanelPages = (props) => {
 	const initialPageName = "Untitled Page";
 
 	// const pages = reduxNotebook.sections[0].tabs[0].pages;
-	const storePages = useSelector((state) => state.pagesReducer.pages);
-	const initialPages = [...storePages];
+	const storePages = useSelector((state) => state.pages);
+	console.log(storePages);
 
-	const [displayPages, setDisplayPages] = useState(initialPages);
 	const [newPageName, setNewPageName] = useState(initialPageName);
 	const [isEditing, setIsEditing] = useState(false);
 	// const [globalPages, setGlobalPages] = useState(pages);
@@ -54,7 +53,7 @@ const SidePanelPages = (props) => {
 	return (
 		<div width="100%">
 			<Flex direction="column">
-				{displayPages.map((page) => {
+				{storePages.map((page) => {
 					return (
 						<Button variant="ghost" key={page.id}>
 							{page.title}

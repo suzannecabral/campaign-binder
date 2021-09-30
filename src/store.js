@@ -4,11 +4,13 @@ import { composeWithDevTools } from "redux-devtools-extension";
 // import {reducers} from reducer files
 // import { peopleReducer } from "./reducers/peopleReducers";
 import { pagesReducer } from "./reducers/pagesReducer";
-import { notebook } from "./content/dummyNotebookSimple";
+import { notebook } from "./content/dummyNotebookTest";
 // each key-value pair is a different reducer
 // can be accessed as part of state
 // can use react-redux (useSelector, useDispatch) instead of mapStateToProps
-const reducer = combineReducers({ pagesReducer });
+// const reducer = combineReducers({ pagesReducer });
+
+const reducer = pagesReducer;
 
 const initialState = notebook;
 

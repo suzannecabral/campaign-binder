@@ -3,7 +3,7 @@ import notebook from "../content/dummyNotebookTest";
 
 const initialState = notebook;
 
-export const pagesReducer = (currentState = initialState, action) => {
+export const pagesReducer = (currentState, action) => {
 	switch (action.type) {
 		case types.ADD_PAGE:
 			// return currentState;
@@ -18,5 +18,3 @@ export const pagesReducer = (currentState = initialState, action) => {
 			return currentState;
 	}
 };
-
-export default pagesReducer;
