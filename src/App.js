@@ -1,7 +1,8 @@
-// import { useSelector, useDispatch } from "react-redux";
-import { /* useEffect, */ useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 //import constants for action types
 // import { getPeopleAction } from "./actions/peopleActions";
+import { getPages } from "./actions/pageActions";
 import { Flex } from "@chakra-ui/react";
 import "./App.css";
 import MainEditorWindow from "./components/MainEditorWindow";
@@ -12,7 +13,7 @@ import TopNavBar from "./components/TopNavBar";
 
 function App() {
 	// const displayNotes = notes;
-	// const dispatch = useDispatch();
+	const dispatch = useDispatch();
 	// const people = useSelector((state) => state.peopleReducer);
 	// const { success } = people;
 
@@ -24,9 +25,10 @@ function App() {
 	// 	}, 5000);
 	// };
 
-	// useEffect(() => {
-	// 	dispatch(getPeopleAction());
-	// }, dispatch);
+	// load pages into state when the app first loads
+	useEffect(() => {
+		dispatch(getPages());
+	}, []);
 
 	return (
 		<Flex className="App" height="100%" direction="column">

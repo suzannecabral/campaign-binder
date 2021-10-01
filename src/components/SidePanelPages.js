@@ -20,7 +20,7 @@ const SidePanelPages = (props) => {
 
 	// const pages = reduxNotebook.sections[0].tabs[0].pages;
 	const storePages = useSelector((state) => state.pages);
-	console.log(storePages);
+	// console.log(storePages);
 
 	const [newPageName, setNewPageName] = useState(initialPageName);
 	const [isEditing, setIsEditing] = useState(false);
