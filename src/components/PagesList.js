@@ -14,12 +14,12 @@ import {
 import { AddIcon, CheckIcon } from "@chakra-ui/icons";
 import * as types from "../constants/actionTypes";
 
-const SidePanelPages = (props) => {
+const PagesList = (props) => {
 	const dispatch = useDispatch();
 	const initialPageName = "Untitled Page";
 
 	// const pages = reduxNotebook.sections[0].tabs[0].pages;
-	const storePages = useSelector((state) => state.pages);
+	const storePages = useSelector((state) => state.activeNotebook);
 	// console.log(storePages);
 
 	const [newPageName, setNewPageName] = useState(initialPageName);
@@ -96,4 +96,4 @@ const SidePanelPages = (props) => {
 	);
 };
 
-export default SidePanelPages;
+export default PagesList;

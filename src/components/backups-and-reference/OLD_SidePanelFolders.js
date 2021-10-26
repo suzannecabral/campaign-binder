@@ -15,7 +15,7 @@ import { IoMdFolder, IoMdFolderOpen } from "react-icons/io";
 
 import React from "react";
 
-const SidePanelFolders = (props) => {
+const FolderTree = (props) => {
 	return (
 		<div>
 			<Accordion allowMultiple h="100%" w="40">
@@ -68,4 +68,4 @@ const SidePanelFolders = (props) => {
 	);
 };
 
-export default SidePanelFolders;
+export default FolderTree;

@@ -17,8 +17,8 @@ import { IoMdFolder, IoMdFolderOpen } from "react-icons/io";
 
 import React from "react";
 
-const SidePanelFolders = (props) => {
-	const storePages = useSelector((state) => state.pages);
+const FolderTree = (props) => {
+	const storePages = useSelector((state) => state.activeNotebook);
 	const handleClick = (notebook) => {};
 	return (
 		<div>
@@ -48,4 +48,4 @@ const SidePanelFolders = (props) => {
 	);
 };
 
-export default SidePanelFolders;
+export default FolderTree;

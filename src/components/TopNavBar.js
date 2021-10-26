@@ -4,7 +4,7 @@ import { Heading, Stack, Box, Text, Button } from "@chakra-ui/react";
 const TopNavBar = (props) => {
 	return (
 		<div>
-			<Box p="2" bg="lightcoral">
+			<Box p="2" bg="blue.400">
 				<Heading as="h1" size="xs" textAlign="left" pl="2" pt="0.5">
 					Campaign Binder
 				</Heading>

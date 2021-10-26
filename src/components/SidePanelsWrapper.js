@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import SidePanelFolders from "./SidePanelFolders";
-import SidePanelPages from "./SidePanelPages";
+import FolderTree from "./FolderTree";
+import PagesList from "./PagesList";
 import {
 	Heading,
 	Flex,
@@ -16,17 +16,17 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { ImBook } from "react-icons/im";
-import { setActiveNotebook } from "../actions/pageActions";
+import { setActiveNotebook } from "../actions/notebookActions";
 
 const SidePanelsWrapper = (props) => {
 	const dispatch = useDispatch();
-	const storeBooks = useSelector((state) => state.pages);
+	const storeBooks = useSelector((state) => state.activeNotebook);
 	const handleClick = (book) => {
 		dispatch(setActiveNotebook(book));
 	};
 	return (
 		<div>
-			<Box w="100%" h="100%" bg="indianred">
+			<Box w="100%" h="100%" bg="blue.200">
 				<Menu>
 					<MenuButton
 						as={Button}
@@ -50,8 +50,8 @@ const SidePanelsWrapper = (props) => {
 					</MenuList>
 				</Menu>
 				<Flex height="100%">
-					<SidePanelFolders />
-					<SidePanelPages />
+					<FolderTree />
+					<PagesList />
 				</Flex>
 			</Box>
 		</div>

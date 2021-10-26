@@ -4,10 +4,10 @@ import { notebooks } from "../content/dummyNotebookSimple";
 // TODO use data from server in payload once server is implemented
 
 // async/await goes in actions
-export const getPages = () => (dispatch) => {
+export const getActiveNotebook = () => (dispatch) => {
 	// add to UI state loading:true
 
-	dispatch({ type: types.GET_PAGES, payload: notebooks });
+	dispatch({ type: types.GET_ACTIVE_NOTEBOOK, payload: notebooks });
 
 	// await fetch
 	// catch in case there's a server error

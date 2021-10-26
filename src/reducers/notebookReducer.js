@@ -3,7 +3,10 @@ import * as types from "../constants/actionTypes.js";
 
 // const initialState = notebooks;
 
-export const pagesReducer = (currentState = { pages: [] }, action) => {
+export const notebookReducer = (
+	currentState = { activeNotebook: [] },
+	action
+) => {
 	switch (action.type) {
 		case types.ADD_PAGE:
 			// return currentState;
@@ -16,7 +19,12 @@ export const pagesReducer = (currentState = { pages: [] }, action) => {
 				...currentState,
 				activeNotebook: action.payload,
 			};
-		case types.GET_PAGES:
+		case types.SET_ACTIVE_TAB:
+			return {
+				...currentState,
+				activeTab: action.payload,
+			};
+		case types.GET_ACTIVE_NOTEBOOK:
 			return {
 				...currentState,
 				pages: action.payload,

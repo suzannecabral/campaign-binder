@@ -6,13 +6,7 @@ import React from "react";
 const SideBarButtons = (props) => {
 	return (
 		<div>
-			<Stack
-				bg="lightcoral"
-				height="100%"
-				textAlign="center"
-				spacing="0"
-				pl="1"
-			>
+			<Stack bg="blue.400" height="100%" textAlign="center" spacing="0" pl="1">
 				<IconButton
 					aria-label="Show Tabs"
 					icon={<ImBooks />}
